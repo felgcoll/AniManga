@@ -8,65 +8,120 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0;
 }
 
-h1{
-  font-size: 4rem;
-  color: rgb(0, 0, 0);
-  border: 2px solid rgb(255, 255, 255);
-  border-bottom-color:rgb(255, 255, 255);
-  border-radius: 25px;
-  background-color: rgb(255, 255, 255);
-  transition: all 0.5s;
-}
-h1:hover{
-  color:rgb(34, 107, 202); 
-  transform:scale(1.05);
+.zone {
+  color:rgb(0, 0, 0);
+  font-size:2em;
+  border-radius:4px;
+  border:1px solid #bbb;
+  transition: all 0.3s linear;
 }
 
-img{
-  width: 250px;
-  height: 350px;
+.zone:hover {
+  -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.main-nav{
+  display: flex;
+  list-style: none;
+  font-size: 0.5em;
+  margin: 0;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  margin: 2em;
+}
+
+.z {
+  color:rgb(0, 0, 0);
+  font-size: 3em;
+  border-radius:10px;
+  border:1px solid #bbb;
+  transition: all 0.3s linear;
+}
+
+.z:hover {
+  -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+@media only screen and (max-width: 600px){
+  .main-nav{
+    font-size: 0.3em;
+    padding: 0;
+  }
+
+  .container{
+    font-size: 0.9em;
+    padding: 0;
+  }
+}
+
+li{
+  padding: 20px;
+}
+
+a{
+  color:rgb(238, 238, 238);
+  text-decoration: none;
+}
+
+.push{
+  margin-left: auto;
+}
+
+.grid-wrapper{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+
+}
+
+.box > img{
+  width: 100%;
+  height: 100%;
+}
+
+.box{
+  background-color: rgba(0, 0, 0, 0.151);
+  padding: 20px;
   margin: 20px;
-  transition: all 0.5s;
 }
 
-img:hover{
-  transform:scale(1.05);
+footer{
+  text-align: right;
 }
 
-.buffer{
-  height: 20rem;  
+
+
+.blue {
+  background: #7abcff; /* Old browsers */
+  background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+  background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
 }
 
-.btn{
-  font-weight: 700;
-  border-radius: 500px;
-  margin: 80px;
+.white {
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top, #cee2f5 0%, #c6ddf5 44%, #dbe9f8 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edf3f8), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #cee2f5 0%, #c6ddf5 44%, #dbe9f8 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #cee2f5 0%, #c6ddf5 44%, #dbe9f8 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #cee2f5 0%, #c6ddf5 44%, #dbe9f8 100%); /* IE10+ */
+  background: linear-gradient(top, #cee2f5 0%, #c6ddf5 44%, #dbe9f8 100%); /* W3C */
 }
 
-#a{
-  background-color: rgb(119, 209, 209);
-  border-color: rgb(119, 209, 209);
-  transition: all 0.5s;
-}
-
-#a:hover{
-  background-color: rgb(102, 160, 160);
-  border-color:rgb(102, 160, 160);
-  border-width: 5px;
-  transform:scale(1.05);
-}
-
-#m{
-  background-color: rgb(0, 0, 0);
-  border-color: rgb(0, 0, 0);
-  transition: all 0.5s;
-}
-
-#m:hover{
-  background-color: rgb(63, 58, 58);
-  border-color:rgb(63, 58, 58);
-  border-width: 5px;
-  transform:scale(1.05);
-}
